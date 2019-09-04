@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1IeMCeJesMCkfGOd7nlq7mY_mHzZv6XqA'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1bq9wJNu1uil3i9a9T3_DfZvTuOSDaVgo'
 export_file_name = 'export.pkl'
 
 classes = ['Clean', 'Porn', 'Sexy']
