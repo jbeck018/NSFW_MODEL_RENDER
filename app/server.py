@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1bq9wJNu1uil3i9a9T3_DfZvTuOSDaVgo'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1YvMsK2mmJ6hxntkPFJEMpVT1cLX_SGPr'
 export_file_name = 'export.pkl'
 
 classes = ['Clean', 'Porn', 'Sexy']
@@ -62,7 +62,7 @@ async def analyze(request):
     img = open_image(BytesIO(img_bytes))
     prediction = learn.predict(img)
     pred_clean = prediction[0]
-    return JSONResponse({'result': 'Prediction ' + str(pred_clean) + '. Raw Data: ' + str(prediction)})
+    return JSONResponse({'result': 'Prediction ' + str(pred_clean) + '. Raw Data: ' + str(prediction[2])})
 
 
 if __name__ == '__main__':
